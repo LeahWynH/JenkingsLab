@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-#
+#prep
 docker rm -vf $(docker ps -a -q)
 docker rmi -f $(docker images -a -q)
 docker builder prune --all --force
