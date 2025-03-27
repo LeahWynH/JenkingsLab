@@ -4,8 +4,8 @@ pipeline{
         stages{
             stage (“Prep”){
                     steps {
-                        sh 'docker rm -vf $(docker ps -a -q)'
-                        sh 'docker rmi -f $(docker images -a -q)'
+                        sh 'docker rm -vf $(docker ps -a -q) || true'
+                        sh 'docker rmi -f $(docker images -a -q) || true'
                         sh 'docker builder prune --all --force'
                     }
                 }
