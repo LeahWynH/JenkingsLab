@@ -9,13 +9,13 @@ Pipeline{
                         sh 'docker builder prune --all --force'
                     }
                 }
-            Stage (“Create Netwrok”){
+            Stage (“CreateNetwrok”){
                 Options {timeout or allowfailoure}
                     Step {
                         sh 'docker network create lab9-network || true'
                     }
                 }
-            Stage (“Create Volumes”){
+            Stage (“CreateVolumes”){
                     Step {
                         sh 'docker volume create lab9vol'
                     }
