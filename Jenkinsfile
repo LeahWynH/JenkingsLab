@@ -1,5 +1,5 @@
 Pipeline{
-    Agent any{
+    Agent any
         Stages{
             Stage (“Prep”){
                 Options {timeout or allowfailoure}
@@ -40,4 +40,4 @@ Pipeline{
             }
         }
     }
-}
+
